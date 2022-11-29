@@ -3,7 +3,7 @@ import os
 import torch
 import cv2
 
-model = torch.hub.load('ultralytics/yolov5','yolov5s')
+model = torch.hub.load('ultralytics/yolov5','yolov5l6')
 
 app = Flask(__name__)
 
