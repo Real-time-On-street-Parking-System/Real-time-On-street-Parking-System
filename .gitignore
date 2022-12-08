@@ -1,2 +1,3 @@
 upload_dir/*
 *.pt
+__pycache__

@@ -2,8 +2,10 @@ from flask import Flask,request,jsonify
 import os
 import torch
 import cv2
+import logging
 
 model = torch.hub.load('ultralytics/yolov5','yolov5l6')
+logging.log(logging.DEBUG,'build model success!')
 
 app = Flask(__name__)
 
@@ -27,3 +29,7 @@ def upload_file():
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=5000,debug=True)
+else:
+    gunicorn_logger = logging.getLogger('gunicorn.error')
+    app.logger.handlers = gunicorn_logger.handlers
+    app.logger.setLevel(gunicorn_logger.level)
