@@ -1,7 +1,7 @@
 version: "3"
 
 services:
-    Backend:
+    backend:
         build: /Backend
         container_name: Backend-192.168.0.1
         tty: true
@@ -18,7 +18,7 @@ services:
             net-192.168.0.0:
                 ipv4_address: 192.168.0.1
 
-    MongoDB:
+    mongodb:
         image: mongo
         container_name: MongoDB-192.168.0.3
         tty: true
