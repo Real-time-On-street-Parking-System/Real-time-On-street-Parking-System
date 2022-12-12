@@ -3,4 +3,4 @@
 	url = https://github.com/Real-time-On-street-Parking-System/Backend.git
 [submodule "RTSPS"]
 	path = RTSPS
-	url = git@github.com:Real-time-On-street-Parking-System/RTSPS.git
+	url = https://github.com/Real-time-On-street-Parking-System/RTSPS.git
