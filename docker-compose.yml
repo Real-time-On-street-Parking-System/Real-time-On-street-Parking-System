@@ -2,40 +2,40 @@ version: "3"
 
 services:
     backend:
-        build: /Backend
-        container_name: Backend-192.168.0.1
+        build: ./Backend
+        container_name: Backend-10.9.0.1
         tty: true
         volumes:
-            - '${HOME}/Real-time-On-street-Parking-System/Backend:/app'
+            - "${HOME}/Real-time-On-street-Parking-System/Backend:/app"
         logging:
-            driver: 'json-file'
+            driver: "json-file"
             options:
-                max-file: '5'
-                max-size: '10m'
+                max-file: "5"
+                max-size: "10m"
         ports:
-            - '3000:3000'
+            - "3000:3000"
         networks:
-            net-192.168.0.0:
-                ipv4_address: 192.168.0.1
+            net-10.9.0.0:
+                ipv4_address: 10.9.0.1
 
     mongodb:
         image: mongo
-        container_name: MongoDB-192.168.0.3
+        container_name: MongoDB-10.9.0.3
         tty: true
         logging:
-            driver: 'json-file'
+            driver: "json-file"
             options:
-                max-file: '5'
-                max-size: '10m'
+                max-file: "5"
+                max-size: "10m"
         ports:
-            - '27017:27017'
+            - "27017:27017"
         networks:
-            net-192.168.0.0:
-                ipv4_address: 192.168.0.3
+            net-10.9.0.0:
+                ipv4_address: 10.9.0.3
 
 networks:
-    net-192.168.0.0:
-        name: net-192.168.0.0
+    net-10.9.0.0:
+        name: net-10.9.0.0
         ipam:
             config:
-                - subnet: 192.168.0.0/24
+                - subnet: 10.9.0.0/24
