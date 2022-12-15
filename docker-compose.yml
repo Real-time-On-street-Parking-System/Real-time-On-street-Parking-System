@@ -12,8 +12,6 @@ services:
             options:
                 max-file: "5"
                 max-size: "10m"
-        ports:
-            - "3000:3000"
         networks:
             net-10.9.0.0:
                 ipv4_address: 10.9.0.3
@@ -27,8 +25,6 @@ services:
             options:
                 max-file: "5"
                 max-size: "10m"
-        ports:
-            - "27017:27017"
         networks:
             net-10.9.0.0:
                 ipv4_address: 10.9.0.5
