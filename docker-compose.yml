@@ -3,7 +3,7 @@ version: "3"
 services:
     backend:
         build: ./Backend
-        container_name: Backend-10.9.0.1
+        container_name: Backend-10.9.0.3
         tty: true
         volumes:
             - "${HOME}/Real-time-On-street-Parking-System/Backend:/app"
@@ -16,11 +16,11 @@ services:
             - "3000:3000"
         networks:
             net-10.9.0.0:
-                ipv4_address: 10.9.0.1
+                ipv4_address: 10.9.0.3
 
     mongodb:
         image: mongo
-        container_name: MongoDB-10.9.0.3
+        container_name: MongoDB-10.9.0.5
         tty: true
         logging:
             driver: "json-file"
@@ -31,7 +31,7 @@ services:
             - "27017:27017"
         networks:
             net-10.9.0.0:
-                ipv4_address: 10.9.0.3
+                ipv4_address: 10.9.0.5
 
 networks:
     net-10.9.0.0:
