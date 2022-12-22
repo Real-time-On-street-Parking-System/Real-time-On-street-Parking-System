@@ -16,6 +16,23 @@ services:
             net-10.9.0.0:
                 ipv4_address: 10.9.0.3
 
+    rtsps:
+        build: ./RTSPS
+        container_name: RTSPS-10.9.0.4
+        tty: true
+        port:
+            - "1883:1883"
+        volumes:
+            - "${HOME}/Real-time-On-street-Parking-System/RTSPS:/app"
+        logging:
+            driver: "json-file"
+            options:
+                max-file: "5"
+                max-size: "10m"
+        networks:
+            net-10.9.0.0:
+                ipv4_address: 10.9.0.4
+
     mongodb:
         image: mongo
         container_name: MongoDB-10.9.0.5
