@@ -20,7 +20,7 @@ services:
         build: ./RTSPS
         container_name: RTSPS-10.9.0.4
         tty: true
-        port:
+        ports:
             - "1883:1883"
         volumes:
             - "${HOME}/Real-time-On-street-Parking-System/RTSPS:/app"
